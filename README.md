@@ -31,3 +31,15 @@ $ docker-compose up -d
 ```bash
 $ docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
+
+- Ingresar a Consola de MySQL
+
+```bash
+$ docker-compose exec db bash
+```
+
+- Actualizar migraciones
+
+```bash
+$ docker-compose exec app php artisan migrate
+```
